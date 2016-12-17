@@ -51,10 +51,12 @@ module.exports = function(grunt) {
         options: {
           processors: [
             require("autoprefixer")({browsers: [
-              "last 1 version",
-              "last 2 Chrome versions",
-              "last 2 Firefox versions",
-              "last 2 Opera versions",
+              "last 5 version",
+              "ie 8",
+              "ie 9",
+              "last 5 Chrome versions",
+              "last 5 Firefox versions",
+              "last 5 Opera versions",
               "last 2 Edge versions"
             ]}),
             require("css-mqpacker")({
