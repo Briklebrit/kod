@@ -1,0 +1,57 @@
+.form-submit-wrapper {
+  margin: 0;
+  padding: 0 6.25% 15px 6.25%;
+
+
+  .form-btn {
+    display: block;
+    padding: 16px 0;
+    .open-sans-bold(30px, 700, 18px, @w, uppercase);
+    text-align: center;
+    background-color: @btn-bg;
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+
+    &:hover {
+      background-color: #1c9b5e;
+    }
+
+    &:active {
+      background-color: #1c9b5e;
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:disabled {
+      background-color: #e5e5e5;
+
+      &:hover,
+      &:active  {
+        background-color: #e5e5e5;
+        color: @w;
+      }
+    }
+  }
+}
+
+
+
+@media @tablet-widths {
+
+  .form-submit-wrapper {
+    width: 42.387%;
+  }
+}
+
+
+@media @desktop-widths {
+  .form-submit-wrapper {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .form-submit-wrapper {
+    width: 300px;
+  }
+}

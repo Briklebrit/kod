@@ -1,0 +1,58 @@
+.slider {
+
+  &__switcher {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:62px;
+    height: 18px;
+    .list-style();
+    margin: 0 auto;
+
+    }
+
+  .slider__point {
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      border: 3px solid @w;
+      background-color: #bec2c7;
+
+    &--active {
+      border-color: #283645;
+      background-color: @w;
+    }
+  }
+
+}
+
+.price .slider {
+
+  
+
+  .slider__point {
+    border-color: @grey-bg;
+    background-color: #b5b9be;
+
+    &--active {
+      border-color: #283645;
+      background-color: @grey-bg;
+    }
+  }
+
+}
+
+
+
+
+
+@media @desktop-widths {
+  .slider {
+
+    &__switcher {
+      display: none;
+    }
+  }
+
+}

@@ -1,0 +1,120 @@
+.pink-offer {
+  padding: 28px 6.25% 30px 6.25%;
+  &__wrapper {
+    .container-fluid();
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  &__download {
+    .btn();
+    padding: 15.5px 0;
+    margin-bottom: 30px;
+    // letter-spacing: 1px;
+
+    &:hover {
+      color: rgb(210,40, 86);
+      background-color: @w;
+    }
+
+    &:active,
+    &:focus {
+      color: rgba(210,40, 86, 0.3);
+      background-color: @w;
+    }
+  }
+
+  &__support {
+    margin-bottom: 20px;
+  }
+
+  &__dscr {
+    margin: 0;
+    padding: 0 8%;
+    .open-sans-light();
+    text-align: center;
+    color: @w;
+  }
+}
+
+
+@media @mobile-widths-only {
+  .pink-offer {
+  h2 {
+      display: none;
+    }
+  }
+}
+
+
+@media @tablet-widths {
+  .pink-offer {
+    padding: 0 6% 84px 6%;
+
+
+    &__inner {
+      width: 42.857%;
+      min-width: 300px;
+    }
+
+    h2 {
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 25px;
+      padding: 0 10.5%;
+      .open-sans-light(50px, 300, 40px, @w, none);
+      text-align: center;
+    }
+
+    &__download {
+      margin-bottom: 40px;
+    }
+
+    &__support {
+      margin-bottom: 38px;
+    }
+
+    &__dscr {
+      padding: 0;
+      .open-sans-light(24px, 300, 18px, @w, none);
+      color: @w;
+    }
+  }
+}
+
+
+
+
+
+
+@media @desktop-widths {
+  .pink-offer {
+    padding-bottom: 97px;
+
+  h2 {
+    display: block;
+    margin-bottom: 50px;
+    padding: 0 10.5%;
+    .open-sans-light(60px, 300, 50px, @w, none);
+    text-align: center;
+  }
+
+  &__download {
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+  }
+
+
+    &__inner {
+      width: 300px;
+    }
+
+    &__dscr {
+      padding-top:21px;
+      .open-sans-light(24px, 300, 18px, @w, none);
+      color: @w;
+    }
+  }
+}

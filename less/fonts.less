@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"),
+       url("../fonts/opensans.woff") format("woff"),
+       url("../fonts/opensans.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans Light";
+  font-style: light;
+  font-weight: 300;
+  src: local("Open Sans Light"),
+       url("../fonts/opensanslight.woff") format("woff"),
+       url("../fonts/opensanslight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  font-style: bold;
+  font-weight: 700;
+  src: local("Open Sans Bold"),
+       url("../fonts/opensansbold.woff") format("woff"),
+       url("../fonts/opensansbold.woff2") format("woff2");
+}
+
+@open-sans: "Open Sans", "Arial", sans-serif;
+@open-sans-bold: "Open Sans Bold", "Arial", sans-serif;
+@open-sans-light: "Open Sans Light", "Arial", sans-serif;
+
+.open-sans (@line-height: 30px, @font-weight: 400, @font-size: 14px, @color: @text-col, @text-transform: none) {
+  line-height: @line-height;
+  font-weight: @font-weight;
+  font-size: @font-size;
+  color: @color;
+  text-transform: @text-transform;
+  font-family: @open-sans;
+}
+
+.open-sans-bold (@line-height: 30px, @font-weight: 700, @font-size: 18px, @color: @text-col, @text-transform: none) {
+  line-height: @line-height;
+  font-weight: @font-weight;
+  font-size: @font-size;
+  color: @color;
+  text-transform: @text-transform;
+  font-family: @open-sans-bold;
+}
+
+.open-sans-light (@line-height: 24px, @font-weight: 300, @font-size: 14px, @color: @text-col, @text-transform: none) {
+  line-height: @line-height;
+  font-weight: @font-weight;
+  font-size: @font-size;
+  color: @color;
+  text-transform: @text-transform;
+  font-family: @open-sans-light;
+}

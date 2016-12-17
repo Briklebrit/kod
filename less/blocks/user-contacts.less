@@ -1,0 +1,150 @@
+.user-contacts {
+  .container-fluid();
+  margin: 0;
+  padding: 31px 6.25% 38px 6.25%;
+  border: 0;
+
+    &__title {
+      display: none;
+    }
+
+  &__phone,
+  &__email {
+    .flex();
+    flex-direction: column;
+    .open-sans();
+    color: @form-text;
+    text-transform: uppercase;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  &__mobile {
+  order: -1;
+  padding-left: 8%;
+  margin-bottom: 5px;
+  }
+
+  &__tablet {
+    display: none;
+  }
+}
+
+
+@media @tablet-widths {
+  .user-contacts-wrapper {
+    .container-fluid();
+    padding-top: 52px;
+  }
+
+  .user-contacts {
+    width: 88.571%;
+    margin: 0 auto;
+    padding: 31px 8.377% 0 8.377%;
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
+
+      &__title {
+        display: block;
+        padding: 0 4.838%;
+        .open-sans();
+        color: @form-text;
+        text-transform: uppercase;
+
+      }
+
+    &__phone,
+    &__email {
+      .flex();
+      flex-direction: column;
+      .open-sans();
+      color: @form-text;
+      text-transform: uppercase;
+
+      input {
+        position: relative;
+        padding: 14px 0 15px 18px;
+        margin-bottom: 11px;
+      }
+    }
+
+    &__mobile {
+      display: none;
+    }
+
+    &__tablet {
+      display: block;
+      order: 2;
+      padding-left: 18px;
+      margin-bottom: 28px;
+    }
+  }
+}
+
+
+@media @desktop-widths {@media @tablet-widths {
+  .user-contacts-wrapper {
+    .container-fluid();
+    padding-top: 0;
+  }
+
+  .user-contacts {
+    .flex();
+    justify-content: space-between;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 25px;
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
+
+      &__title {
+        display: block;
+        padding: 0 4.838%;
+        .open-sans();
+        color: @form-text;
+        text-transform: uppercase;
+
+      }
+
+    &__phone,
+    &__email {
+      .flex();
+      flex-direction: column;
+      width: 370px;
+      .open-sans();
+      color: @form-text;
+      text-transform: uppercase;
+
+      input {
+        position: relative;
+        padding: 14px 0 15px 18px;
+        margin-bottom: 11px;
+      }
+    }
+
+    &__phone {
+      margin-left: 60px;
+    }
+
+    &__email {
+      margin-right: 60px;
+    }
+
+    &__mobile {
+      display: none;
+    }
+
+    &__tablet {
+      display: block;
+      order: 2;
+      padding-left: 18px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+}

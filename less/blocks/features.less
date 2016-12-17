@@ -1,0 +1,320 @@
+.features {
+
+  &__call {
+    .container-fluid();
+    padding: 40px 12.5% 0 12.5%;
+    .open-sans-light(30px, 300, 24px, @text-col, none);
+    text-align: center;
+  }
+
+  &__list-wrapper {
+      background-color: @grey-bg;
+  }
+
+  &__list {
+    .flex();
+    flex-direction: column;
+    .container-fluid();
+    .list-style();
+    padding: 110px 6.25% 290px 6.25%;
+    background-color: @grey-bg;
+    background-image: url(../img/bg-triangle-white.svg),
+                      url(../img/iphone-screen-mobile@1x.png);
+    background-repeat: no-repeat;
+    background-position: top, bottom -45px center;
+    background-size: auto, 157px auto;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .features__list {
+      background-image: url(../img/bg-triangle-white.svg),
+                        url(../img/iphone-screen-mobile@2x.png);
+  }
+}
+
+  &__item {
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    .open-sans-bold();
+    color: @b;
+
+  }
+
+  &__dscr {
+    margin: 0;
+    .open-sans();
+    line-height: 24px;
+  }
+
+  &__effect {
+    display: none;
+  }
+}
+
+.features__call p {
+    margin: 0;
+    margin-bottom: 27px;
+  }
+
+.features__call p:last-of-type {
+  margin-bottom: 0;
+}
+
+
+
+
+@media @tablet-widths {
+  .features {
+
+    &__call {
+      padding: 50px 0 45px 0;
+      .open-sans-light(50px, 300, 40px, @text-col, none);
+
+      p:first-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__list {
+      align-items: flex-end;
+      padding: 93px 6.25% 0 6.25%;
+      background-image: url(../img/iphone-screen-3-tablet@1x.png),
+                        url(../img/bg-triangle-white.svg);
+      background-repeat: no-repeat;
+      background-position: bottom left 9.5%, top;
+      background-size: 268px auto, auto;
+    }
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .features__list {
+        background-image: url(../img/bg-triangle-white.svg),
+                          url(../img/iphone-screen-3-tablet@2x.png);
+    }
+  }
+
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    &__item:nth-child(2) {
+      margin-bottom: 33px;
+    }
+
+    &__item:nth-child(3) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .features__call p:last-child {
+    padding: 0 22.58%;
+  }
+
+  .features__call {
+    padding-bottom: 20px;
+  }
+
+
+  .features__effect {
+    display: block;
+
+    &-wrapper {
+      .container-fluid();
+      padding: 0 6.25% 0 6.25%;
+    }
+
+    &-time {
+      position:absolute;
+      top: 105px;
+      left: 70px;
+      .open-sans-bold(96px, 700, 96px, #d22856, none);
+    }
+
+    &-inner {
+      .flex();
+      justify-content: flex-end;
+      padding: 57px 0 95px 0;
+
+      &-item {
+        width: 44.285%;
+        min-width: 310px;
+        text-align: left;
+      }
+    }
+
+.features__effect-inner-item:first-child {
+  position: relative;
+  height: 280px;
+  background-image: url(../img/clock.svg);
+  background-repeat: no-repeat;
+  background-position: top left 5px;
+  background-size: 240px;
+
+}
+
+
+    h3 {
+      margin: 0;
+      margin-bottom: 12px;
+      padding-top: 40px;
+      .open-sans-bold(34px, 700, 30px, @b, none);
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 8px;
+      line-height: 24px;
+    }
+
+    a {
+      color: #d22856;
+    }
+  }
+
+}
+
+
+
+
+@media @desktop-widths {
+  .features {
+
+    &__call {
+      padding: 72px 0 80px 0;
+      .open-sans-light(55px, 300, 50px, @text-col, none);
+    }
+
+    &__list-wrapper {
+      background-image: url(../img/bg-triangle-white.svg);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: contain;
+    }
+
+    &__list {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0;
+      background-color: transparent;
+      background-image: url(../img/iphone-screen-1-desktop@1x.png),
+                        url(../img/iphone-screen-2-desktop@1x.png),
+                        url(../img/iphone-screen-3-desktop@1x.png);
+      background-repeat: no-repeat;
+      background-position: top  left, center top,  top right;
+      background-size: 295px auto;
+    }
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .features__list {
+      background-image: url(../img/iphone-screen-1-desktop@2x.png),
+                        url(../img/iphone-screen-2-desktop@2x.png),
+                        url(../img/iphone-screen-3-desktop@2x.png);
+    }
+  }
+
+
+    &__item {
+      .flex();
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 300px;
+      height: 570px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+
+
+
+    &__item:nth-child(3) {
+      margin-bottom: 0;
+    }
+
+    &__item:nth-child(2) {
+        margin-bottom: 0;
+    }
+
+
+    &__title {
+      margin-bottom: 25px;
+      .open-sans-bold(30px, 700, 30px, @b, none);
+    }
+
+    &__dscr {
+      margin: 0;
+      .open-sans (30px, 400, 18px, @text-col, none);
+      padding: 0 30px;
+    }
+  }
+
+.features__item:nth-child(2) .features__title {
+    padding: 0 20px;
+  }
+
+
+  .features__effect {
+    display: block;
+    background-color: @grey-bg;
+
+    &-wrapper {
+      .container-fluid();
+    }
+
+
+    &-time {
+      position:absolute;
+      top: 128px;
+      left: 80px;
+      .open-sans-bold(120px, 700, 120px, #d22856, none);
+    }
+
+    &-inner {
+      justify-content: flex-start;
+      padding: 62px 0 40px 0;
+
+      &-item {
+        width: 572px;
+        padding: 53px 0 0 0;
+        text-align: left;
+      }
+
+
+      .features__effect-inner-item:first-child {
+        position: relative;
+        width: 368px;
+        height: 320px;
+        background-image: url(../img/clock.svg);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 300px;
+      }
+    }
+
+    h3 {
+      .open-sans-bold(35px, 700, 30px, @b, none);
+      margin-bottom: 20px;
+
+      span {
+        display: none;
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+      .open-sans (30px, 400, 18px, @text-col, none)
+    }
+
+    a {
+      .open-sans (30px, 400, 18px, #d22856, none)
+    }
+
+  }
+
+}

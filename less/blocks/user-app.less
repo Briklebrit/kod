@@ -1,0 +1,156 @@
+.user-app-wrapper {
+  background-color: @grey-bg;
+}
+
+
+.user-app {
+  .container-fluid();
+  margin: 0;
+  padding: 0 6.25%;
+  border: 0;
+
+  &__title {
+    margin: 37px 0 34px 0;
+    padding: 0;
+    .open-sans();
+    color: @form-text;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    .open-sans(30px, 400, 18px, @form-main-text, none);
+    padding: 5px 0 0 24.428%;
+    margin-bottom: 40px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 45px;
+    }
+    }
+
+  input {
+      display: none;
+    }
+
+  input + .user-app__indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    background-color: @w;
+  }
+
+  input:checked + .user-app__indicator::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    .size(15px, 15px);
+    border-radius: 50%;
+    background-color: #d22856;
+  }
+
+  &__item {
+
+      &:hover input + .user-app__indicator {
+        border-color: @form-hvr;
+      }
+
+      &:active  input + .user-app__indicator {
+        border-color: @form-act;
+      }
+    }
+}
+
+
+
+
+
+@media @tablet-widths {
+  .user-app-wrapper {
+    .container-fluid();
+    padding-top: 3px;
+    background-color: @w;
+  }
+
+
+  .user-app {
+    width: 88.571%;
+    padding: 0;
+    padding-top: 42px;
+    margin: 0 auto;
+
+    border: 2px solid #e5e5e5;
+
+    &__title {
+      padding: 0 3.709%;
+      margin: 0;
+    }
+
+    &__item {
+      padding: 5px 0 0 19.354%;
+
+      &:last-child {
+        margin-bottom: 58px;
+      }
+      }
+
+
+    input + .user-app__indicator {
+      left: 60px;
+    }
+  }
+
+}
+
+
+
+
+
+@media @desktop-widths {
+  .user-app-wrapper {
+    width: auto;
+    padding-top: 12px;
+      padding-left: 35px;
+    margin: 0;
+    background-color: @w;
+    box-sizing: border-box;
+  }
+
+
+  .user-app {
+    width: 433px;
+    margin: 0;
+    border: 2px solid #e5e5e5;
+    box-sizing: border-box;
+
+    &__title {
+      padding: 0 3.709%;
+      margin: 0;
+    }
+
+    &__item {
+      padding: 9px 0 0 135px;
+      margin-bottom: 35px;
+
+
+      &:last-child {
+        margin-bottom: 58px;
+      }
+      }
+
+
+    input + .user-app__indicator {
+      top: 5px;
+      left: 75px;
+    }
+  }
+
+}

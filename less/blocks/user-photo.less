@@ -1,0 +1,261 @@
+.user-photo {
+
+  &__label {
+    position: absolute;
+    top:0;
+    right: 6.25%;
+    display: block;
+    .size(140px, 36px);
+    padding: 6px 0;
+    .open-sans-bold(24px, 700, 12px, @w, uppercase);
+    text-align: center;
+    box-sizing: border-box;
+    background-color: @form-text;
+  }
+
+  &__about {
+    .container-fluid();
+    padding: 0 6.25%;
+    margin: 0 auto;
+
+  }
+
+  &__autor {
+    margin: 0;
+    padding-top: 17px;
+    padding-left: 5.357%;
+    .open-sans-bold();
+    font-size: 14px;
+    line-height: 24px;
+    background-color: @grey-bg;
+  }
+
+  &__time {
+    .open-sans-light();
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  &__dscr {
+    margin: 0;
+    padding-bottom: 5px;
+    padding-left: 5.357%;
+    .open-sans();
+    line-height: 24px;
+    background-color: @grey-bg;
+  }
+
+  &__like {
+    display: block;
+    margin: 0;
+    padding-bottom: 20px;
+    padding-left: 17.857%;
+    .open-sans();
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #d22856;
+    background-color: @grey-bg;
+    background-image: url(../img/icon-heart.svg);
+    background-repeat: no-repeat;
+    background-position: left 6.25% top 10px;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__day-photo {
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+@media @tablet-widths {
+  .user-photo {
+
+    &__label {
+      top: 55px;
+    }
+
+    &__day-photo {
+      margin-bottom: 50px;
+
+      img {
+        display: block;
+        min-height: 509px;
+        margin: 0 auto;
+      }
+
+      .user-photo__about {
+        position: relative;
+      }
+
+      .user-photo__autor {
+        margin: 0;
+        padding-top: 22px;
+        padding-left: 4.157%;
+      }
+
+      .user-photo__dscr {
+        padding-bottom: 25px;
+        padding-left: 4.157%;
+      }
+
+      .user-photo__like {
+        position: absolute;
+        top:  20px;
+        right: 10%;
+        padding: 0;
+        padding-right: 30px;
+        background-position:  top 9px right;
+      
+        }
+      }
+
+
+    &__wrapper {
+      .flex();
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 88.571%;
+      margin: 0 auto;
+    }
+
+    &__item {
+      width: 48.387%;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+
+      img {
+        display: block;
+        min-height: 300px;
+        margin: 0 auto;
+      }
+
+      .user-photo__about {
+        position: relative;
+        width: auto;
+        min-height: 155px;
+        padding: 0;
+
+        box-sizing: border-box;
+        background-color: @grey-bg;
+      }
+
+      .user-photo__autor {
+        margin: 0;
+        padding-top: 22px;
+        padding-left: 8.333%;
+      }
+
+      .user-photo__dscr {
+        padding-bottom: 25px;
+        padding-left: 8.333%;
+      }
+
+      .user-photo__like {
+        position: absolute;
+        display: block;
+        width: 90%;
+        bottom: 20px;
+        left: 8.333%;
+        padding: 0;
+        background-position: top 10px right 29px ;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+
+
+
+@media @desktop-widths {
+  .user-photo {
+
+    &__label {
+      top:55px;
+      right: 130px;
+    }
+
+    &__day-photo {
+      margin-bottom: 50px;
+
+      img {
+        display: block;
+        min-height: 509px;
+        margin: 0 auto;
+      }
+
+      .user-photo__about {
+        position: relative;
+        width: 940px;
+      }
+
+      .user-photo__autor {
+        margin: 0;
+        padding-top: 22px;
+        padding-left: 27px;
+      }
+
+      .user-photo__dscr {
+        padding-bottom: 25px;
+        padding-left: 27px;
+      }
+
+      .user-photo__like {
+        position: absolute;
+        top:  20px;
+        right: 13%;
+        padding: 0;
+      }
+
+      .user-photo__like {
+        position: absolute;
+        top:  20px;
+        right: 105px;
+        padding: 0;
+        padding-right: 30px;
+        background-position:  top 9px right;
+        }
+    }
+
+
+
+
+    &__wrapper {
+      .flex();
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 940px;
+      margin: 0 auto;
+    }
+
+
+
+
+    &__item {
+      width: 300px;
+      margin-bottom: 53px;
+      box-sizing: border-box;
+
+      img {
+        display: block;
+        min-height: 400px;
+        margin: 0;
+      }
+
+    }
+
+  }
+}

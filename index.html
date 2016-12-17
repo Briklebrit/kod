@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Сборка</title>
+  </head>
+  <body>
+    <a href="gr.html">GR</a>
+    <h1>Сборка:</h1>
+    <h2>Node.js</h2>
+    <ol>
+      <li>Установка Node.js</li>
+      <li>создание package.json (npm init)</li>
+      <li>npm install</li>
+      <li>npm install -g grunt grunt-cli --save-dev</li>
+    </ol>
+    <h2>Установка плагинов</h2>
+    <ol>
+      <li>npm install autoprefixer --save-dev</li>
+      <li>npm install css-mqpacker --save-dev</li>
+      <li>npm install grunt --save-dev</li>
+      <li>npm install grunt-cli --save-dev</li>
+      <li>npm install grunt-contrib-clean --save-dev</li>
+      <li>npm install grunt-contrib-copy --save-dev</li>
+      <li>npm install grunt-contrib-imagemin --save-dev</li>
+      <li>npm install grunt-contrib-less --save-dev</li>
+      <li>npm install grunt-contrib-watch --save-dev</li>
+      <li>npm install grunt-csso --save-dev</li>
+      <li>npm install grunt-postcss --save-dev</li>
+      <li>npm install grunt-svgmin --save-dev</li>
+      <li>npm install grunt-svgstore --save-dev</li>
+      <li>npm install load-grunt-tasks --save-dev</li>
+    </ol>
+    <h2>package.json</h2>
+    <ol>
+      <li>В файле package.json должны прописаться все зависимости. Следующий вид:
+        <pre>
+          "devDependencies": {
+          "autoprefixer": "^6.5.1",
+          "css-mqpacker": "^5.0.1",
+          "grunt": "^1.0.1",
+          "grunt-browser-sync": "^2.2.0",
+          "grunt-cli": "^1.2.0",
+          "grunt-contrib-clean": "^1.0.0",
+          "grunt-contrib-copy": "^1.0.0",
+          "grunt-contrib-imagemin": "^1.0.1",
+          "grunt-contrib-less": "^1.4.0",
+          "grunt-contrib-watch": "^1.0.0",
+          "grunt-csso": "^2.0.1",
+          "grunt-postcss": "^0.8.0",
+          "grunt-svgmin": "^4.0.0",
+          "grunt-svgstore": "^1.0.0",
+          "load-grunt-tasks": "^3.5.2"
+        },
+        "scripts": {
+          "build": "grunt build",
+          "start": "npm run build && grunt serve"
+        }</pre>
+      </li>
+    </ol>
+    <h2>Конфигурация сборки:</h2>
+    <ol>
+      <li>
+        <pre>
+          module.exports = function(grunt) {
+            require("load-grunt-tasks")(grunt);
+
+            grunt.initConfig({
+              csso: {
+                style: {
+                    options: {
+                      report: "qzip"
+                    },
+                  files: {
+                    "build/css/style.min.css": ["build/css/style.css"]
+                  }
+                }
+              },
+
+              imagemin: {
+                images: {
+                  options: {
+                    optimizationLevel: 3
+                  },
+                  files: [{
+                    expand: true,
+                    src: ["build/img/**/*.{png,jpg,gif}"]
+                  }]
+                }
+              },
+
+              svgstore: {
+                options: {
+                  svg: {
+                    style: "display: none"
+                  }
+                },
+                symbols: {
+                  files: {
+                    "build/img/symbols.svg" : ["img/icons/*.svg"]
+                  }
+                }
+              },
+
+              less: {
+                style: {
+                  files: {
+                    "build/css/style.css": "less/style.less"
+                  }
+                }
+              },
+
+              postcss: {
+                style: {
+                  options: {
+                    processors: [
+                      require("autoprefixer")({browsers: [
+                        "last 1 version",
+                        "last 2 Chrome versions",
+                        "last 2 Firefox versions",
+                        "last 2 Opera versions",
+                        "last 2 Edge versions"
+                      ]}),
+                      require("css-mqpacker")({
+                        sort: true
+                      })
+                    ]
+                  },
+                  src: "build/css/*.css"
+                }
+              },
+
+              browserSync: {
+                server: {
+                  bsFiles: {
+                    src: [
+                      "build/*.html",
+                      "build/css/*.css"
+                    ]
+                  },
+                  options: {
+                    server: "build",
+                    watchTask: true,
+                    notify: false,
+                    open: true,
+                    ui: false
+                  }
+                }
+              },
+
+              svgmin: {
+                symbols: {
+                  files: [{
+                    expand: true,
+                    src: ["build/img/icons/*.svg"]
+                  }]
+                }
+              },
+
+
+              copy: {
+                build: {
+                  files: [{
+                    expand: true,
+                    src: [
+                      "fonts/**/*.{woff, woff2}",
+                      "img/**",
+                      "js/**",
+                      "*.html"
+                    ],
+                    dest: "build"
+                  }]
+                },
+                html: {
+                  files: [{
+                    expand: true,
+                    src: ["*.html"],
+                    dest: "build"
+                  }]
+                }
+              },
+
+              clean: {
+                build: ["build"]
+              },
+
+              watch: {
+                html: {
+                  files: ["*.html"],
+                  tasks: ["copy:html"]
+                },
+                style: {
+                  files: ["less/**/*.less"],
+                  tasks: ["less", "postcss", "csso"],
+                  options: {
+                    spawn: false
+                  }
+                }
+              }
+
+
+
+            });
+
+            grunt.registerTask("serve", ["browserSync", "watch"]);
+            grunt.registerTask("symbols", ["svgmin", "svgstore"]);
+            grunt.registerTask("build", [
+              "clean",
+              "copy",
+              "less",
+              "postcss",
+              "csso",
+              "symbols",
+              "imagemin"
+            ]);
+          };
+        </pre>
+      </li>
+    </ol>
+    <h2>Добавление исключений git</h2>
+    <ol>
+      <li>
+        Файл .gitignore имеет следующий вид:
+        <pre>
+          .DS_Store
+          .idea
+          *.ai
+          *.log
+          *.pdf
+          *.psd
+          *.sublime*
+          build/
+          css/*.css
+          node_modules/
+          Thumbs.db
+        </pre>
+      </li>
+    </ol>
+  </body>
+</html>

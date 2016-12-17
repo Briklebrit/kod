@@ -1,0 +1,54 @@
+.support-platforms {
+  .flex();
+  justify-content: space-around;
+  .list-style();
+
+}
+
+.support-platforms__item a {
+  display: block;
+  width: 50px;
+  height: 60px;
+}
+
+.support-platforms__item:first-child {
+  margin-left: 8%;
+}
+
+.support-platforms__item:last-child {
+  margin-right: 8%;
+}
+
+.support-platforms__item:first-child a {
+  background: url(../img/logo-apple.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.support-platforms__item:nth-child(2) a {
+  background: url(../img/logo-android.svg);
+  background-repeat: no-repeat;
+  background-position: center top 10px;
+}
+
+.support-platforms__item:last-child a {
+  background: url(../img/logo-microsoft.svg);
+  background-repeat: no-repeat;
+  background-position: center top 15px;
+}
+
+
+
+@media @tablet-widths {
+  .support-platforms__item:first-child a {
+    background-position: center top 4px;
+  }
+
+  .support-platforms__item:nth-child(2) a {
+    background-position: center top 12px;
+  }
+
+  .support-platforms__item:last-child a {
+    background-position: left 0 top 17px;
+  }
+}

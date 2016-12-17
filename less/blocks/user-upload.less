@@ -1,0 +1,392 @@
+.user-upload {
+
+  &__title {
+    .container-fluid();
+    padding: 15px 6.25% 35px 6.25%;
+    .open-sans();
+    text-align: center;
+  }
+
+
+
+  &__item {
+    padding: 20px 0;
+    padding-bottom: 30px;
+    background-color: #f2f2f2;
+  }
+
+  &__inner {
+    width: 87.5%;
+    margin: 0 auto;
+
+  }
+
+  &__settings {
+    .flex();
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    margin-bottom: 37px;
+    margin-top: 15px;
+
+  }
+
+  &__parametr {
+    .size(50px, 50px);
+    margin-bottom: 47px;
+    // background-color: red;
+
+    svg {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+
+      &:hover path {
+        fill: #8d949b;
+      }
+
+      &:hover rect {
+        fill: #8d949b;
+      }
+
+      &:active path{
+        fill: @form-text;
+      }
+
+      &:active rect{
+        fill: @form-text;
+      }
+    }
+  }
+
+  &__parametr:first-child svg {
+    padding-left: 10px;
+  }
+
+  &__parametr:nth-child(3) svg {
+    padding-top: 10px;
+  }
+
+  &__main-scale {
+    position: relative;
+    top: -15px;
+    width:100%;
+
+    .user-upload__range-bar {
+      width: 85.714%;
+      margin: 0 auto;
+      border: 1px solid  #283645;
+    }
+
+    .user-upload__toggle {
+      position: absolute;
+      top: -5px;
+      right: 20%;
+      .size(10px, 10px);
+      border: 2px solid #d43560;
+      border-radius: 50%;
+      background-color: @w;
+
+      &:hover {
+        background-color: @form-text;
+      }
+    }
+  }
+
+  &__action {
+    width: 100%;
+    .btn();
+    padding: 15px 0;
+    margin-bottom: 12px;
+    color: #d22856;
+    border-color: #d22856;
+
+    &:hover {
+      background-color: #d22856;
+      color: @w;
+    }
+
+    &:active {
+      background-color: #d22856;
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+
+.user-upload__action {
+
+
+    &--off {
+      border-color: rgba(40, 54, 69, 0.1);
+      color: rgba(40, 54, 69, 0.1);
+
+      &:hover {
+        border-color: rgba(40, 54, 69, 0.3);
+        color: rgba(40, 54, 69, 0.3);
+        background-color: transparent;
+      }
+
+      &:active {
+        background-color: rgba(40, 54, 69, 0.1);
+        border-color: rgba(40, 54, 69, 0.1);
+        color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+
+
+
+
+
+@media @tablet-widths {
+  .user-upload {
+    &__item {
+      padding: 60px 0 0 0;
+    }
+
+    &__title {
+      .container-fluid();
+      padding: 30px 6.25% 68px 6.25%;
+      margin-bottom: 0;
+      line-height: 30px;
+      font-size: 18px;
+    }
+
+    img {
+      display:block;
+      // width: 48.387%;
+      min-height: 400px;
+      margin-bottom: 50px;
+    }
+
+    &__inner {
+      .flex();
+      justify-content: space-between;
+      width: 88.571%;
+      margin: 0 auto;
+    }
+
+
+    &__settings-inn {
+       width: 48.387%;
+    }
+
+
+    &__settings {
+      .flex();
+      flex-direction: column;
+      justify-content: space-between;
+      padding:  0;
+      margin-bottom: 40px;
+
+    }
+
+    &__parametr {
+      position: relative;
+      .size(100%, 50px);
+      margin-bottom: 20px;
+      // background-color: red;
+
+      svg {
+        width: 25px;
+        top: -18px;
+        left: 30px;
+      }
+    }
+
+    &__parametr:first-child svg {
+      width: 23px;
+      top: -19px;
+      left: 30px;
+      padding-left: 0;
+    }
+
+    &__parametr:nth-child(3) svg {
+      width: 17px;
+      left: 32px;
+      padding-top: 10px;
+    }
+
+    &__main-scale {
+      display: none;
+    }
+
+    &__scale {
+      position: relative;
+      top: -21px;
+      width:100%;
+
+      .user-upload__range-bar {
+        position: absolute;
+        top: 25px;
+        right: 6.666%;
+        width: 66.666%;
+        margin: 0 auto;
+        border: 1px solid  #283645;
+      }
+
+      .user-upload__toggle {
+        position: absolute;
+        top: 19px;
+        right: 20%;
+        .size(10px, 10px);
+        border: 2px solid #d43560;
+        border-radius: 50%;
+        background-color: @w;
+
+        &:hover {
+          background-color: @form-text;
+        }
+      }
+    }
+
+    &__post {
+      width: 87.666%;
+      margin: 0 auto;
+    }
+
+    &__action {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+
+
+
+
+@media @desktop-widths {
+  .user-upload {
+
+    &__item {
+      padding-top: 0;
+      background-color: @w;
+    }
+
+    &__title {
+      .container-fluid();
+      padding: 7px 6.25% 68px 6.25%;
+      line-height: 30px;
+      font-size: 18px;
+    }
+
+    img {
+      width: 300px;
+      min-height: 400px;
+      padding-left: 80px;
+      padding-top: 15px;
+
+    }
+
+    &__inner {
+      .flex();
+      justify-content: space-between;
+      width: 940px;
+      margin: 0 auto;
+      padding-top: 40px;
+      padding-bottom: 5px;
+      background-color: #f2f2f2;
+    }
+
+    &__settings-inn {
+       width: 470px;
+       padding-right: 60px;
+    }
+
+    &__settings {
+      .flex();
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px 0;
+      margin-bottom: 130px;
+
+    }
+
+
+    &__scale {
+      position: relative;
+      width:100%;
+
+      .user-upload__range-bar {
+        position: absolute;
+        top: 27px;
+        right: 6.666%;
+        width: 285px;
+        margin: 0 auto;
+        border: 1px solid  #283645;
+      }
+
+      .user-upload__toggle {
+        position: absolute;
+        top: 21px;
+        right: 20%;
+        .size(10px, 10px);
+        border: 2px solid #d43560;
+        border-radius: 50%;
+        background-color: @w;
+        }
+      }
+
+
+      &__post {
+        .flex();
+        justify-content: space-between;
+        width: 410px;
+        margin: 0;
+        margin-left: auto;
+      }
+
+      &__action {
+        width: 183px;
+        .btn();
+        padding: 15px 0;
+        margin-bottom: 12px;
+        color: #d22856;
+        border-color: #d22856;
+        box-sizing: border-box;
+
+        &:hover {
+          background-color: #d22856;
+          color: @w;
+        }
+
+        &:active {
+          background-color: #d22856;
+          color: rgba(255, 255, 255, 0.3);
+        }
+      }
+
+      &__parametr {
+        position: relative;
+        .size(100%, 50px);
+        margin-bottom: 20px;
+        // background-color: red;
+
+        svg {
+          width: 50px;
+          top: -10px;
+          left: 65px;
+        }
+      }
+
+      &__parametr:nth-child(3) {
+        margin-bottom: 0;
+      }
+
+      &__parametr:first-child svg {
+        width: 50px;
+        top: -15px;
+        left: 60px;
+        padding-left: 0;
+      }
+
+      &__parametr:nth-child(3) svg {
+        width: 40px;
+        top: -15px;
+        left: 65px;
+        padding-top: 10px;
+      }
+  }
+}

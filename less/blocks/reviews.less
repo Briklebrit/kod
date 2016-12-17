@@ -1,0 +1,148 @@
+.reviews {
+
+  &__wrapper {
+    padding: 45px 0 5px 0;
+  }
+
+  &__inner {
+    .container-fluid();
+    padding: 0 6.25% 0 6.25%;
+  }
+
+  &__item {
+    margin: 0;
+
+    p {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 30px;
+      text-align: center;
+
+
+    }
+
+  }
+
+  &__item:nth-child(2),
+  &__item:nth-child(3) {
+    display: none;
+  }
+
+
+  &__autor {
+    display: block;
+    margin-bottom: 11px;
+    .open-sans-bold();
+    font-style: normal;
+    text-align: center;
+    letter-spacing: 1px;
+    color: @b;
+
+    span {
+      display: none;
+    }
+
+
+  }
+}
+
+
+@media @tablet-widths {
+  .reviews {
+    &__wrapper {
+      padding: 0;
+    }
+
+
+    &__item {
+
+    .flex();
+    flex-direction: column-reverse;
+
+    p {
+      margin-bottom: 35px;
+      .open-sans (30px, 400, 18px, @text-col,  none)
+    }
+  }
+
+    &__autor {
+      margin-bottom: 33px;
+      .open-sans-bold (30px, 700,  20px, @b,  none);
+      letter-spacing: normal;
+
+    }
+  }
+
+  .reviews__autor span {
+    display: block;
+    margin-bottom: 0;
+    .open-sans(30px, 400, 14px, @text-col, none);
+  }
+}
+
+
+@media @desktop-widths {
+  .reviews {
+
+    &__wrapper {
+      padding: 185px 0 15px 0;
+    }
+
+
+    &__item {
+      .flex();
+      flex-direction: column-reverse;
+
+    p {
+      padding: 0 125px;
+
+    }
+  }
+
+    &__autor {
+      margin-bottom: 15px;
+      .open-sans-bold (30px, 700,  24px, @b,  none)
+    }
+
+    .reviews__autor span {
+      font-size: 18px;
+    }
+
+
+    &__switcher {
+      position:absolute;
+      display: block;
+      width: 28px;
+      height: 28px;
+      border: 2px solid #bec2c7;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      cursor: pointer;
+
+      &:hover {
+        border-right-color: #7e868f;
+        border-top-color: #7e868f;
+      }
+
+      &:active {
+        border-right-color: #e9ebec;
+        border-top-color: #e9ebec;
+      }
+
+      &:first-child {
+        top: 30px;
+        left: 7px;
+        transform: rotate(-135deg);
+      }
+
+      &:last-child {
+        top: 30px;
+        right: 7px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+
+}

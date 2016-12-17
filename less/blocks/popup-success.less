@@ -1,0 +1,132 @@
+.popup-success {
+  .container-fluid();
+  display: none;
+
+  &__inner {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    .container-fluid();
+    width: 87.5%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    .open-sans-bold();
+    color: @b;
+    text-align: center;
+  }
+
+  &__dscr {
+    .container-fluid();
+    width: 87.5%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    .open-sans();
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    background-color: @grey-bg;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    box-shadow: 0 5px 7px 2px #e4e4e4;
+  }
+
+  &__close {
+    .container-fluid();
+    width: 87.5%;
+    margin: 0 auto;
+    .form-btn();
+  }
+}
+
+
+@media @tablet-widths {
+  .popup-success {
+  width: 460px;
+  margin: 0 auto;
+  box-shadow: 0 5px 7px 2px #e4e4e4;
+  box-sizing: border-box;
+
+
+  &__inner {
+    padding: 45px 80px 30px 80px;
+  }
+
+  &__title {
+    font-size: 30px;
+  }
+
+  &__dscr {
+    .container-fluid();
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    .open-sans();
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    background-color: @grey-bg;
+    padding: 45px 70px 55px 70px;
+  }
+
+  &__close {
+    padding: 0 80px;
+    .container-fluid();
+    width: 100%;
+    margin: 0 auto;
+    .form-btn();
+  }
+}
+}
+
+
+
+
+
+@media @desktop-widths {
+  .popup-success {
+  width: 780px;
+  margin: 0 auto;
+  box-shadow: 0 5px 7px 2px #e4e4e4;
+  box-sizing: border-box;
+
+
+  &__inner {
+    padding: 45px 80px 30px 80px;
+
+  }
+
+  &__title {
+    width: auto;
+    font-size: 30px;
+    margin-bottom: 30px;
+
+  }
+
+  &__dscr {
+    width: auto;
+    margin-bottom: 40px;
+    .open-sans();
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__wrapper {
+    background-color: @grey-bg;
+    padding: 45px 70px 55px 70px;
+  }
+
+  &__close {
+    width: 100%;
+    padding: 0 80px;
+    .form-btn();
+  }
+}
+}

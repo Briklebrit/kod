@@ -1,0 +1,257 @@
+
+.body-index .page-footer,
+.body-form .page-footer,
+.body-photo .page-footer {
+  .container-fluid();
+
+  &__social{
+      width: 64.285%;
+      margin-bottom: 40px;
+  }
+
+  &__wrapper {
+    .flex();
+    flex-direction: column;
+    align-items: center;
+    width: 87.5%;
+    margin: 0 auto;
+  }
+
+
+  &__logo {
+    display: block;
+    margin-bottom: 45px;
+    box-sizing: border-box;
+  }
+
+  &__developer {
+    position: relative;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+      a {
+        display: inline-block;;
+        padding: 2px 35px 5px 0;
+        margin-left: -10px;
+        .open-sans(18px, 400, 14px, @text-col, none);
+        text-decoration: none;
+      }
+
+      svg  {
+        position: absolute;
+        top: -7px;
+        left: 87px;
+      }
+  }
+}
+
+.page-footer__logo svg {
+  display: none;
+}
+
+.page-footer__logo svg:first-of-type {
+  display: block;
+  padding-top: 40px;
+}
+
+.page-footer__logo:hover .page-footer__picture path {
+  fill: @main-nav-hvr;
+}
+
+.page-footer__logo:active .page-footer__picture path {
+  fill: #f1becc;
+}
+
+
+@media @mobile-widths-only {
+.body-index .page-footer {
+  display: none;
+}
+}
+
+
+
+@media @tablet-widths {
+
+  .body-index .page-footer,
+  .body-form .page-footer,
+  .body-photo .page-footer {
+    .container-fluid();
+    margin-top: 0;
+    padding: 0 6.25%;
+
+
+    &__wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto;
+
+    }
+
+    &__logo {
+      display: block;
+      width: 23.87%;
+      min-width: 148px;
+    }
+
+
+    &__social {
+      width: 29.032%;
+      margin-left: 30px;
+      margin-top: 5px;
+    }
+
+    &__developer {
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 29.35%;
+      // min-width: 150px;
+      margin: 0;
+      padding: 0;
+
+        a {
+          display: inline-block;
+          padding: 5px 40px 5px 0;
+          margin-bottom: 35px;
+          .open-sans(18px, 400, 14px, @text-col, none);
+          text-decoration: none;
+        }
+
+        svg {
+          position:absolute;
+          top: -5px;
+          left: 150px;
+        }
+
+        a:hover + svg path {
+          fill: @b;
+        }
+
+        a:active + svg path {
+          opacity: 0.3;
+        }
+    }
+
+  .page-footer__logo svg:first-of-type {
+    display: block;
+    padding-top: 0;
+    }
+  }
+
+
+  .body-index .page-footer {
+    margin-top: 180px;
+
+  }
+}
+
+
+
+
+
+
+
+@media @desktop-widths {
+.page-footer {
+  padding: 40px 0 50px 0;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+
+    &__logo {
+      width: 150px;
+    }
+
+    &__social {
+      width: 200px;
+    }
+
+    &__developer {
+      width: 200px;
+
+        a {
+          display: block;
+          box-sizing: border-box;
+          padding:  20px 40px 20px 0;
+          margin-top: 0;
+          font-size: 18px;
+          text-decoration: none;
+        }
+
+    }
+
+    .page-footer__logo svg:first-of-type {
+      display: none;
+    }
+
+    .page-footer__logo svg:last-of-type {
+      display: block;
+      padding-top: 32px;
+    }
+
+
+
+  }
+
+  .body-index .page-footer,
+  .body-form .page-footer,
+  .body-photo .page-footer {
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 60px;
+
+
+    }
+
+    &__logo {
+      width: 150px;
+    }
+
+    &__social {
+      width: 180px;
+      margin-left: 55px;
+    }
+
+    &__developer {
+      width: 200px;
+
+
+        a {
+          display: block;
+          box-sizing: border-box;
+          padding:  20px 40px 20px 0;
+          margin-top: 0;
+          font-size: 18px;
+          text-decoration: none;
+        }
+
+        svg {
+          position:absolute;
+          top: 10px;
+          left: 165px;
+        }
+    }
+
+    .page-footer__logo svg:first-of-type {
+      display: none;
+    }
+
+    .page-footer__logo svg:last-of-type {
+      display: block;
+      padding-top: 0;
+    }
+  }
+
+
+}

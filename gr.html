@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Графика</title>
+  </head>
+  <body>
+    <p>meta name="viewport" content="width=device-width,initial-scale=1"></p>
+    <pre>
+      Медиавыражения (media queries)
+@media (max-width: 200px) {
+.layout-center-wrapper { … }
+.features li { … }
+.index-left-column,
+}
+Позволяют активировать CSS-код в зависимости от разных условий.
+    </pre>
+    <p>
+      Ретинизация
+      <pre>
+        •	@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {...}
+
+      </pre>
+      <pre>
+        Ретина и растровые фоны:
+.bg-single {
+width: 200px;
+background-repeat: no-repeat;
+background-image: url('bg-200px.png');
+background-size: 200px auto;
+}
+@media (min-resolution: 1.5dppx) {
+.bg-single {
+background-image: url('bg-400px.png');
+}
+}
+      </pre>
+      <pre>
+        Ретина и растровые img
+<img src="400.png" width="400" srcset="">
+      </pre>
+      <pre>
+        Комбинация всех возможностей:
+<picture> HTM
+<source - десктоп -->
+type="image/webp"
+media="(min-width: 960px)"
+srcset="img/desktop-large.webp 2x,
+img/desktop-small.webp 1x">
+<source
+media="(min-width: 960px)"
+srcset="img/desktop-large.jpg 2x,
+img/desktop-small.jpg 1x">
+<source - мобильный -->
+type="image/webp"
+media="(min-width: 640px)"
+srcset="img/mobile-large.webp 2x,
+img/mobile-small.webp 1x">
+<source
+media="(min-width: 640px)"
+srcset="img/mobile-large.jpg 2x,
+img/mobile-small.jpg 1x">
+<img src="img/mobile-small.jpg">
+</picture>
+
+      </pre>
+    </p>
+  </body>
+</html>
